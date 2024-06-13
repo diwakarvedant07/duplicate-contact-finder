@@ -71,6 +71,8 @@ func main() {
 	// removed auth from global middlewares
 	// router.AddGlobalMiddleware(middlewares.Auth)
 
+	router.AddGlobalMiddleware(middlewares.Log)
+
 	// handle request with route-specific middlewares
 	router.Handle("GET /", http.HandlerFunc(handlers.Hello))
 
@@ -80,7 +82,7 @@ func main() {
 	router.Handle("POST /identify", http.HandlerFunc(customer.IdentifyCustomer))
 
 	port := os.Getenv("PORT")
-  if port =="" {
+	if port == "" {
 		log.Println("No port specified in `.env`. Using default port `8080`.")
 		port = "8080"
 	}
