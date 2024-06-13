@@ -5,10 +5,6 @@
 - Go
 - SQLite
 
-## Exposed Endpoints
-
-API Base URL := `https://pythonapi.mastersofterp.in/BBT/`
-
 1. `GET /`
 Endpoint to check if the API is accessible
 2. `GET /customers`
@@ -44,7 +40,7 @@ Endpoint  to identify, categorise, and process an new incoming request.
 1. Clone the repository
 
     ```sh
-    git clone https://github.com/
+    git clone https://github.com/diwakarvedant07/duplicate-contact-finder.git
     ```
 
 2. Change Directory
@@ -56,13 +52,13 @@ Endpoint  to identify, categorise, and process an new incoming request.
 3. Build
 
     ```sh
-    go build -o bitespeed
+    go build -o dup-finder.exe
     ```
 
 4. Run
 
     ```sh
-    ./bitespeed
+    ./dup-finder
     ```
 
 5. Misc
